@@ -1,7 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const dungeons = [
+    {
+      name: "Azjol-Nerub",
+    },
+    {
+      name: "Stratholme",
+    },
+    {
+      name: "Gundrak",
+    },
+    {
+      name: "Drak'Tharon Keep",
+    },
+    {
+      name: "Utgarde Pinnacle",
+    },
+    {
+      name: "Ahn'Kahet",
+    },
+    {
+      name: "Violet Hold",
+    },
+    {
+      name: "Utgarde Keep",
+    },
+    {
+      name: "The Oculus",
+    },
+    {
+      name: "Halls of Lightning",
+    },
+    {
+      name: "Halls of Stone",
+    },
+    {
+      name: "The Nexus",
+    },
+  ];
+
   return (
     <div className="App">
       <header className="App-header">
