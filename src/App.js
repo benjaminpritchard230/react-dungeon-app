@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+import DungeonCard from "./components/DungeonCard";
 
 function App() {
   const dungeons = [
@@ -41,22 +41,20 @@ function App() {
     },
   ];
 
+  const displayDungeons = dungeons.map((obj, i) => {
+    return <DungeonCard name={obj.name} key={i} />;
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="app">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center p-3">
+            <h2>WotLK Heroic Dungeons</h2>
+          </div>
+        </div>
+        <div class="row dungeons-row">{displayDungeons}</div>
+      </div>
     </div>
   );
 }

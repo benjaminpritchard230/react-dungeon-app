@@ -8,9 +8,10 @@ body {
 
 .app {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #2d4473;
   color: #f2cb05;
-  width: 90%;
   height: min-content;
   border-radius: 15px;
   padding: 20px;
@@ -27,4 +28,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 30vh;
+  border: 5px solid black;
+}
+
+.dungeon-card:hover {
+  transform: scale3d(1.1);
+}
+
+@media (max-width: 768px) {
+  .app {
+  }
+
+  .dungeon-card {
+    height: 10vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .app {
+    max-height: 100vh;
+  }
+
+  .dungeon-card {
+    height: 18vh;
+  }
 }
