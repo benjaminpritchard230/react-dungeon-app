@@ -19,7 +19,6 @@ body {
 }
 
 .dungeon-card {
-  background-image: url("https://s.yimg.com/uu/api/res/1.2/N.GrxCR9Kw2lRA_6UVd2ZQ--~B/aD0zMTU7dz00MjU7YXBwaWQ9eXRhY2h5b24-/https://www.blogcdn.com/wow.joystiq.com/media/2007/08/utgarde_keep425.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,6 +37,7 @@ body {
 
 @media (max-width: 768px) {
   .app {
+    border-radius: 0px;
   }
 
   .dungeon-card {

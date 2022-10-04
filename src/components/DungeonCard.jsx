@@ -1,22 +1,16 @@
 import { useState } from "react";
 
-const DungeonCard = ({ name, image }) => {
-  const [done, setDone] = useState(false);
-
+const DungeonCard = ({ name, done }) => {
   return (
-    <div
-      class="col-lg-4 col-md-6 col-sm-12 mb-4"
-      onClick={() => {
-        setDone(!done);
-      }}
-    >
+    <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
       <div
-        class="dungeon-card"
-        style={
-          !done ? { border: "5px solid black" } : { border: "5px solid green" }
-        }
+        className="dungeon-card"
+        style={{
+          border: "5px solid black",
+        }}
       >
         <h3>{name}</h3>
+        <p>{done ? "done" : "not done"}</p>
       </div>
     </div>
   );
