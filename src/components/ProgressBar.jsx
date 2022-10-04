@@ -1,7 +1,5 @@
-import ProgressBar from "react-bootstrap/ProgressBar";
-
-function BasicExample() {
+function Prog() {
   return <ProgressBar now={60} />;
 }
 
-export default BasicExample;
+export default Prog;
