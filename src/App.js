@@ -107,8 +107,8 @@ function App() {
             <h2>WotLK Heroic Dungeons</h2>
           </div>
         </div>
-        <div className="row p-3">
-          <div className="col">
+        <div className="row">
+          <div className="col pb-4">
             <ProgressBar now={(count / 12) * 100} />
           </div>
         </div>
