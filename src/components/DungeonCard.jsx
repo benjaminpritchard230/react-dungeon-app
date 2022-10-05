@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const DungeonCard = ({ name, done, image, dungeons, setDungeons, dungeon }) => {
   const myStyle = {
-    border: `${done ? "5px solid green" : "5px solid #2d4473"}`,
+    border: `${done ? "5px solid #33CDC1" : "5px solid #27486B"}`,
     backgroundImage: `url(${image})`,
   };
 

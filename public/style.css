@@ -1,5 +1,13 @@
+:root {
+  --light-color: #ccfcfc;
+  --dark-color: #27486b;
+  --green-color: #33cdc1;
+  --gold-color: #edcf49;
+  --blue-color: #85b4f2;
+}
+
 body {
-  background-color: #e3eef4;
+  background-color: var(--light-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,8 +18,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2d4473;
-  color: #f2cb05;
+  background-color: var(--dark-color);
+  color: var(--gold-color);
   height: min-content;
   border-radius: 15px;
   padding: 20px;
@@ -28,9 +36,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 30vh;
-  border: 5px solid black;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  border: 5px solid --dark-color;
+
   user-select: none;
 }
 
