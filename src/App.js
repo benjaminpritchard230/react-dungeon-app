@@ -13,13 +13,13 @@ import uk from "C:/Users/bprit/react-dungeon-app/my-app/src/images/utgarde-keep.
 import up from "C:/Users/bprit/react-dungeon-app/my-app/src/images/utgarde-pinnacle.webp";
 import violetHold from "C:/Users/bprit/react-dungeon-app/my-app/src/images/violet-hold.jpg";
 import { v4 as uuidv4 } from "uuid";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [dungeons, setDungeons] = useState([
     {
       name: "Azjol-Nerub",
-      done: true,
+      done: false,
       image: { src: azjolNerub },
     },
     {
@@ -79,24 +79,25 @@ function App() {
     },
   ]);
 
-  // const dungeons = [
-  //   {
-  //     name: "Azjol-Nerub",
-  //     done: false,
-  //     image: { src: azjolNerub },
-  //   },
-  // ];
+  const [count, setCount] = useState(0);
 
   const displayDungeons = dungeons.map((obj, i) => {
     return (
       <DungeonCard
+        dungeon={obj}
         name={obj.name}
         done={obj.done}
         image={obj.image.src}
         key={i}
+        dungeons={dungeons}
+        setDungeons={setDungeons}
       />
     );
   });
+
+  useEffect(() => {
+    setCount(dungeons.filter((obj) => obj.done === true).length);
+  }, [dungeons]);
 
   return (
     <div className="app">
@@ -108,7 +109,7 @@ function App() {
         </div>
         <div className="row p-3">
           <div className="col">
-            <ProgressBar now={70} />
+            <ProgressBar now={(count / 12) * 100} />
           </div>
         </div>
         <div className="row dungeons-row">{displayDungeons}</div>
