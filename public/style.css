@@ -29,6 +29,9 @@ body {
   align-items: center;
   height: 30vh;
   border: 5px solid black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  user-select: none;
 }
 
 .dungeon-card:hover {

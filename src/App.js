@@ -1,69 +1,101 @@
-import logo from "./logo.svg";
 import DungeonCard from "./components/DungeonCard";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import ahnKahet from "C:/Users/bprit/react-dungeon-app/my-app/src/images/ahnkahet.jpg";
+import azjolNerub from "C:/Users/bprit/react-dungeon-app/my-app/src/images/azjol-nerub.jpg";
+import draktharonKeep from "C:/Users/bprit/react-dungeon-app/my-app/src/images/draktharon-keep.jpg";
+import gundrak from "C:/Users/bprit/react-dungeon-app/my-app/src/images/gundrak.jpg";
+import hol from "C:/Users/bprit/react-dungeon-app/my-app/src/images/halls-of-lightning.jpg";
+import hos from "C:/Users/bprit/react-dungeon-app/my-app/src/images/halls-of-stone.jpg";
+import nexus from "C:/Users/bprit/react-dungeon-app/my-app/src/images/nexus.webp";
+import oculus from "C:/Users/bprit/react-dungeon-app/my-app/src/images/oculus.jpg";
+import stratholme from "C:/Users/bprit/react-dungeon-app/my-app/src/images/stratholme.jpg";
+import uk from "C:/Users/bprit/react-dungeon-app/my-app/src/images/utgarde-keep.webp";
+import up from "C:/Users/bprit/react-dungeon-app/my-app/src/images/utgarde-pinnacle.webp";
+import violetHold from "C:/Users/bprit/react-dungeon-app/my-app/src/images/violet-hold.jpg";
+import { v4 as uuidv4 } from "uuid";
+import { useState } from "react";
 
 function App() {
-  const dungeons = [
+  const [dungeons, setDungeons] = useState([
     {
       name: "Azjol-Nerub",
-      done: false,
+      done: true,
+      image: { src: azjolNerub },
     },
     {
       name: "Stratholme",
       done: false,
+      image: { src: stratholme },
     },
     {
       name: "Gundrak",
       done: false,
+      image: { src: gundrak },
     },
     {
       name: "Drak'Tharon Keep",
       done: false,
+      image: { src: draktharonKeep },
     },
     {
       name: "Utgarde Pinnacle",
       done: false,
+      image: { src: up },
     },
     {
       name: "Ahn'Kahet",
       done: false,
+      image: { src: ahnKahet },
     },
     {
       name: "Violet Hold",
       done: false,
+      image: { src: violetHold },
     },
     {
       name: "Utgarde Keep",
       done: false,
+      image: { src: uk },
     },
     {
       name: "The Oculus",
       done: false,
+      image: { src: oculus },
     },
     {
       name: "Halls of Lightning",
       done: false,
+      image: { src: hol },
     },
     {
       name: "Halls of Stone",
       done: false,
+      image: { src: hos },
     },
     {
       name: "The Nexus",
       done: false,
+      image: { src: nexus },
     },
-  ];
+  ]);
 
   // const dungeons = [
   //   {
-  //     name: "Azjol Nerub",
-  //     image:
-  //       "https://www.almarsguides.com/AlmarsImages/Computer/Games/WoW/Instances/AzjolNerub/AzjolNerub%201.jpg",
+  //     name: "Azjol-Nerub",
+  //     done: false,
+  //     image: { src: azjolNerub },
   //   },
   // ];
 
   const displayDungeons = dungeons.map((obj, i) => {
-    return <DungeonCard name={obj.name} done={obj.done} key={i} />;
+    return (
+      <DungeonCard
+        name={obj.name}
+        done={obj.done}
+        image={obj.image.src}
+        key={i}
+      />
+    );
   });
 
   return (
