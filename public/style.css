@@ -1,5 +1,5 @@
 :root {
-  --light-color: #ccfcfc;
+  --light-color: #ebfffe;
   --dark-color: #27486b;
   --green-color: #33cdc1;
   --gold-color: #edcf49;
@@ -43,6 +43,10 @@ body {
 
 .dungeon-card:hover {
   transform: scale3d(1.1);
+}
+
+.progress-bar {
+  background-color: #85b4f2;
 }
 
 @media (max-width: 768px) {
